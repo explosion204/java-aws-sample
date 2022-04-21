@@ -1,0 +1,15 @@
+plugins {
+    id 'org.springframework.boot' version "$bootVersion"
+}
+
+group 'com.epam.awslearning'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':service')
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: bootVersion
+}

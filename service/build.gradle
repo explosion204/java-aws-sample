@@ -1,0 +1,10 @@
+plugins {
+    id 'java-library'
+}
+
+group 'com.epam.awslearning'
+version '0.1'
+
+dependencies {
+    implementation group: 'com.amazonaws', name: 'aws-java-sdk-core', version: awsSDKVersion
+}
