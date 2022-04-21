@@ -13,3 +13,7 @@ dependencies {
     implementation project(':service')
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: bootVersion
 }
+
+bootJar {
+    archiveName 'awslearning.jar'
+}
