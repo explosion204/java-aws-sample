@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+
+group 'com.epam.awslearning'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: bootVersion
+    implementation group: 'org.postgresql', name: 'postgresql', version: postgresqlVersion
+}

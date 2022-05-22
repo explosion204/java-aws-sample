@@ -1,4 +1,5 @@
 rootProject.name = 'api'
 include 'web'
 include 'service'
+include 'model'
 

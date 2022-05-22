@@ -1,2 +1,15 @@
 server:
   port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://dzmitry-karnyshou-rds.cvwr7vc6qszc.us-east-1.rds.amazonaws.com:5432/postgres
+    username: ...
+    password: ...
+  jpa:
+    generate-ddl: true
+
+s3:
+  bucket:
+    name: dzmitry-karnyshou-images
+  region: us-east-1

@@ -6,5 +6,11 @@ group 'com.epam.awslearning'
 version '0.1'
 
 dependencies {
+    implementation project(':model')
+
     implementation group: 'com.amazonaws', name: 'aws-java-sdk-core', version: awsSDKVersion
+    implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: awsSDKVersion
+
+    implementation group: 'org.mapstruct', name: 'mapstruct', version: mapstructVersion
+    annotationProcessor group: 'org.mapstruct', name: 'mapstruct-processor', version: mapstructVersion
 }

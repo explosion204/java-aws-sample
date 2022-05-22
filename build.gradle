@@ -7,7 +7,8 @@ allprojects {
 
     dependencies {
         implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: bootVersion
-
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: bootVersion
+        implementation group: 'javax.xml.bind', name: 'jaxb-api', version: jaxbApiVersion
         compileOnly group: 'org.projectlombok', name: 'lombok', version: lombokVersion
         annotationProcessor group: 'org.projectlombok', name: 'lombok', version: lombokVersion
     }
