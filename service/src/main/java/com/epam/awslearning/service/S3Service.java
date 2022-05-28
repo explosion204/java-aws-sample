@@ -24,7 +24,7 @@ public class S3Service {
     private static final String JPEG_MIME_TYPE = "image/jpg";
     private final AmazonS3 s3;
 
-    @Value("${s3.bucket.name}")
+    @Value("${aws.s3.bucket.name}")
     private String bucketName;
 
     @PostConstruct
