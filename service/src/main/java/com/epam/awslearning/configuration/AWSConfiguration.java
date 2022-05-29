@@ -1,6 +1,8 @@
 package com.epam.awslearning.configuration;
 
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
+import com.amazonaws.services.lambda.AWSLambda;
+import com.amazonaws.services.lambda.AWSLambdaClient;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.sns.AmazonSNS;
@@ -35,6 +37,14 @@ public class AWSConfiguration {
     @Bean
     public AmazonSQS sqs() {
         return AmazonSQSClient.builder()
+                .withCredentials(new ProfileCredentialsProvider())
+                .withRegion(region)
+                .build();
+    }
+    
+    @Bean
+    public AWSLambda lambda() {
+        return AWSLambdaClient.builder()
                 .withCredentials(new ProfileCredentialsProvider())
                 .withRegion(region)
                 .build();

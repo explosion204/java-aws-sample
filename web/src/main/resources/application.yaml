@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://dzmitry-karnyshou-db.cvwr7vc6qszc.us-east-1.rds.amazonaws.com:5432/postgres
-    username: ...
-    password: ...
+    username: postgres
+    password: postgres
   jpa:
     generate-ddl: true
 
@@ -25,3 +25,12 @@ aws:
     topic:
       arn: arn:aws:sns:us-east-1:244976608449:dzmitry-karnyshou-uploads-notification-topic
       protocol: email
+
+  lambda:
+    arn: arn:aws:lambda:us-east-1:244976608449:function:dzmitry-karnyshou-uploads-batch-notifier
+
+feature:
+  notifications:
+    queue:
+      listener:
+        enabled: false
