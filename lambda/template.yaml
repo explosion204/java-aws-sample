@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Batch notifier lambda function
+Resources:
+  function:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: batch_notifier.py
+      Handler: batch_notifier.lambda_handler
+      FunctionName: dzmitry-karnyshou-batch-notifier
+      Runtime: python3.9
+      Description: Batch notifier
+      MemorySize: 512
+      Timeout: 10
+      Role: arn:aws:iam::244976608449:role/dzmitry-karnyshou-lambda-role
+      AutoPublishAlias: live
+      DeploymentPreference:
+        Type: AllAtOnce

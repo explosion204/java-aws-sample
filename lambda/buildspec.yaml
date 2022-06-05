@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - pip3 install pylint
+  build:
+    commands:
+      - echo Starting checking sources
+      - cd lambda
+      - python3 -m pylint batch_notifier.py || echo Code is verified!
+  post_build:
+    commands:
+      - sam package --template-file template.yaml --output-template-file package.yaml --s3-bucket dzmitry-karnyshou-code
+artifacts:
+  files:
+    - lambda/package.yaml
