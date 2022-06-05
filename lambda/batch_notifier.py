@@ -4,7 +4,7 @@ QUEUE_URL = 'https://sqs.us-east-1.amazonaws.com/244976608449/dzmitry-karnyshou-
 MAX_NUMBER_OF_MESSAGES = 2
 WAIT_TIMEOUT = 2 # in seconds
 
-MESSAGE_SEPARATOR = '\n-------------------\n'
+MESSAGE_SEPARATOR = '\n-----------------------\n'
 
 TOPIC_ARN = 'arn:aws:sns:us-east-1:244976608449:dzmitry-karnyshou-uploads-notification-topic'
 
